@@ -11,7 +11,7 @@ import androidx.core.app.NotificationManagerCompat;
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, @NonNull Intent intent) {
-        Intent i = new Intent(context, homeFragment.class);
+        Intent i = new Intent(context, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         //builder yang akan membuat notifikasi tampil
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0 ,i, 0);
